@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
         <div className="container mx-auto text-center">
           <div className="relative">
             <h1 className="text-6xl md:text-8xl font-black gradient-text mb-6 floating">
-              METAGAMES
+              METAGAMES X
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Gana dinero real jugando. No somos un casino, somos una plataforma de habilidad donde el mejor jugador gana.

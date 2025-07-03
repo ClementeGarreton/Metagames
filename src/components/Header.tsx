@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Gamepad2 className="w-8 h-8 text-orange-500" />
-            <span className="text-2xl font-bold gradient-text">METAGAMES</span>
+            <span className="text-2xl font-bold gradient-text">METAGAMES X</span>
           </Link>
 
           {/* Desktop Navigation */}
