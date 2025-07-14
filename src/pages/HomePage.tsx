@@ -67,22 +67,22 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Header />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto text-center">
           <div className="relative">
-            <h1 className="text-6xl md:text-8xl font-black gradient-text mb-6 floating">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black gradient-text mb-6 floating break-words text-wrap">
               METAGAMES X
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Gana dinero real jugando. No somos un casino, somos una plataforma de habilidad donde el mejor jugador gana.
             </p>
             <a
               href="#game-section"
-              className="cyber-button rounded-full px-8 py-4 text-lg inline-block"
+              className="cyber-button rounded-full px-8 py-4 text-lg inline-block max-w-full"
             >
               COMENZAR A JUGAR
             </a>
@@ -94,7 +94,7 @@ const HomePage: React.FC = () => {
       <section id="game-section" className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 glow-text">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 glow-text">
               Juega Aquí
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
       <section className="py-16 px-4 bg-black/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 glow-text">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 glow-text">
               Cómo Jugar
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
@@ -154,7 +154,7 @@ const HomePage: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Gaming"
-                className="rounded-2xl shadow-2xl neon-border"
+                className="rounded-2xl shadow-2xl neon-border max-w-full"
               />
             </div>
           </div>
@@ -169,7 +169,7 @@ const HomePage: React.FC = () => {
               <img
                 src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Transparency"
-                className="rounded-2xl shadow-2xl neon-border"
+                className="rounded-2xl shadow-2xl neon-border max-w-full"
               />
             </div>
             <div className="order-1 lg:order-2">
