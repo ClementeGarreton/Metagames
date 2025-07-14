@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import GameCard from '../components/GameCard';
-import { Trophy, Shield, Users, Share2, CreditCard, Gamepad2, Eye, Instagram } from 'lucide-react';
+import { Trophy, Share2, CreditCard, Gamepad2 } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+  useEffect(() => {
+    localStorage.removeItem('puntaje'); // 💥 Elimina el puntaje al entrar al Home
+  }, []);
+
   const gameOptions = [
     {
       title: "Mercado Pago",
@@ -65,7 +69,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto text-center">
@@ -95,7 +99,7 @@ const HomePage: React.FC = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {gameOptions.map((option, index) => (
               <GameCard key={index} {...option} />
@@ -113,7 +117,7 @@ const HomePage: React.FC = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howToPlay.map((step, index) => (
               <div key={index} className="text-center group">
@@ -139,21 +143,11 @@ const HomePage: React.FC = () => {
                 Sobre Nosotros
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  Aquí en Metagames puedes ganar dinero online jugando Dino Run haciendo el máximo puntaje a fin de mes.
-                </p>
-                <p>
-                  <strong className="text-orange-500">NO somos un casino online</strong> ya que nuestra propuesta desafía a los juegos de azar que son más trampa que acuerdo mutuo.
-                </p>
-                <p>
-                  El premio millonario se paga el día 28 de cada mes y hay 2 modos de juego.
-                </p>
-                <p>
-                  Modo gratuito para practicar y modo premium con Mercado Pago y Power-Ups.
-                </p>
-                <p>
-                  El modo premium cuesta 5 centavos la entrada o por juego y el power up para revivir y continuar sin perder tu puntaje cuesta 50 centavos.
-                </p>
+                <p>Aquí en Metagames puedes ganar dinero online jugando Dino Run haciendo el máximo puntaje a fin de mes.</p>
+                <p><strong className="text-orange-500">NO somos un casino online</strong> ya que nuestra propuesta desafía a los juegos de azar que son más trampa que acuerdo mutuo.</p>
+                <p>El premio millonario se paga el día 28 de cada mes y hay 2 modos de juego.</p>
+                <p>Modo gratuito para practicar y modo premium con Mercado Pago y Power-Ups.</p>
+                <p>El modo premium cuesta 5 centavos la entrada o por juego y el power up para revivir y continuar sin perder tu puntaje cuesta 50 centavos.</p>
               </div>
             </div>
             <div className="relative">
@@ -183,15 +177,9 @@ const HomePage: React.FC = () => {
                 Transparencia & Confianza
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  Para mantener la transparencia, la legalidad y la confianza publicamos la cantidad de dinero en juego en nuestro Instagram o la red Bitcoin con total transparencia y dominio público.
-                </p>
-                <p>
-                  Antes de entregar el premio, revisamos que el ganador no haya hecho trampa (como modificar el puntaje o jugar sin pagar).
-                </p>
-                <p>
-                  Al entrar al juego en modo premium debes ingresar tu email el cual será censurado en la tabla de ganadores para proteger tu identidad y evitar estafas que se hagan pasar por nosotros.
-                </p>
+                <p>Para mantener la transparencia, la legalidad y la confianza publicamos la cantidad de dinero en juego en nuestro Instagram o la red Bitcoin con total transparencia y dominio público.</p>
+                <p>Antes de entregar el premio, revisamos que el ganador no haya hecho trampa (como modificar el puntaje o jugar sin pagar).</p>
+                <p>Al entrar al juego en modo premium debes ingresar tu email el cual será censurado en la tabla de ganadores para proteger tu identidad y evitar estafas que se hagan pasar por nosotros.</p>
               </div>
             </div>
           </div>
